@@ -1,0 +1,25 @@
+
+
+      .social {
+        width:25px;
+        height:25px;
+        margin-bottom:-4px;
+        margin-top:-4px;
+      }
+
+      @media (max-width:980px) {
+      .soc li {
+        display:none;
+      }
+    }
+
+     @media (min-width:980px) {
+      .soc li {
+           margin-left:-15px;
+      }
+    }
+
+    .label {
+      font-size:15px;
+      padding:8px;
+    }

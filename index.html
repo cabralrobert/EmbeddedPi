@@ -1,0 +1,92 @@
+<html>
+    <head>
+      <title>EmbeddedPi</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>    
+      <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
+      <link rel="stylesheet" type="text/css" href="css/style.css" />  
+      <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+      <script src="js/index.js" type="text/javascript"></script>
+      <link rel="stylesheet" type="text/css" href="css/index.css">
+
+<!--      <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+      <link type="text/css" rel="stylesheet" href="css/model.css">
+      <script src="js/jquery.min.js"></script>
+      <script src="js/bootstrap.min.js"></script> 
+      <script src="js/Chart.min.js"></script>
+      <script src="js/line_db.js"></script>
+      <script src="js/umidade.js"></script>
+	  <script src="js/tempatual.js"></script>
+      <link rel="icon" href="img/rasp.ico" type="image/x-icon" />
+      <link rel="shortcut icon" href="img/rasp.ico" type="image/x-icon" />
+    </head>
+
+
+<body>
+
+    <header>
+      <img src="img/rasp.svg" style="height: 45px; width: 45px;" />
+      <input type="checkbox" id="control-nav" />
+      <label for="control-nav" class="control-nav"></label>
+      <label for="control-nav" class="control-nav-close"></label>
+
+      <nav class="float-r">
+        <ul class="list-auto">
+					<div id="tempatual"></div>
+        </ul>
+		<ul class="list-auto">
+			<li><a href="controletv.html"><h1>Controle TV</h1></a></li>
+		</ul>
+		<ul class="list-auto">
+			<li><a href="ar.html"><h1>Controle AR</h1></a></li>
+		</ul>
+
+      </nav>
+    </header>
+
+
+  <div align="center" style="padding-top: 70px;">
+
+  <h1 style="padding:15px;">Luz quarto</h1>
+
+  <hr />
+
+   <form id="form">
+    <input id="switch-shadow" class="switch switch--shadow" type="checkbox" name="aceso" onclick="processForm()">
+    <label for="switch-shadow"></label>
+
+   </form>
+
+
+	<h1 style="padding: 15px;" >Historico de temperatura</h1>
+
+      <hr>      
+
+     <div class="linechar">
+        <!-- <canvas id="line" height="400" width="500"></canvas> -->        
+
+         <div>
+         <canvas id="line" height="150" width="300"></canvas>
+        </div> 
+      
+     </div>  
+
+	<h1 style="padding:15;">Historico de umidade</h1>
+
+      <hr>      
+
+     <div class="linechar">    
+
+         <div>
+         <canvas id="lineumidade" height="150" width="300"></canvas>
+        </div> 
+      
+     </div>  
+
+
+	</div>
+
+
+
+</body>
+
+</html>
