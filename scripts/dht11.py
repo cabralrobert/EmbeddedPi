@@ -3,8 +3,8 @@ import RPi.GPIO as GPIO
 import time
  
 # Define o tipo de sensor
-sensor = Adafruit_DHT.DHT11
-#sensor = Adafruit_DHT.DHT22
+#sensor = Adafruit_DHT.DHT11
+sensor = Adafruit_DHT.DHT22
  
 GPIO.setmode(GPIO.BOARD)
  
@@ -18,7 +18,7 @@ while aux == 0:
 	umid, temp = Adafruit_DHT.read_retry(sensor, pino_sensor);
 	if umid is not None and temp is not None:
 		if(not umid > 100):
-			print str(int(temp)) + "|" + str(int(umid))
+			print str("%.1f" % temp) + "|" + str("%.1f" % umid)
 			aux = 1
 		else:
 			aux = 0

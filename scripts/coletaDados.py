@@ -5,15 +5,15 @@ import psycopg2
 import psycopg2.extras
 import time
 
-sensor = Adafruit_DHT.DHT11 
+sensor = Adafruit_DHT.DHT22 
 GPIO.setmode(GPIO.BOARD)
 pino_sensor = 23
 
 def inserir(valor,tabela,cursor):
 	if tabela == "valores":
-		cursor.execute("INSERT INTO valores (hora,valor) values ('" + time.strftime('%H:%M') + "','" + str(int(valor)) + "');")
+		cursor.execute("INSERT INTO valores (hora,valor) values ('" + time.strftime('%H:%M') + "','" + str("%.1f" % valor) + "');")
 	elif tabela == "umidade":
-		cursor.execute("INSERT INTO umidade (hora,valor) values ('" + time.strftime('%H:%M') + "','" + str(int(valor)) + "');")
+		cursor.execute("INSERT INTO umidade (hora,valor) values ('" + time.strftime('%H:%M') + "','" + str("%.1f" % valor) + "');")
 
 def delete(tabela,cursor):
 	if tabela == "valores":
