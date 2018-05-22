@@ -1,8 +1,7 @@
 import Adafruit_DHT
 import RPi.GPIO as GPIO
 import time
-import psycopg2
-import psycopg2.extras
+import mysql.connector
 import time
 
 sensor = Adafruit_DHT.DHT22 
@@ -17,9 +16,14 @@ def inserir(valor,tabela,cursor):
 
 def delete(tabela,cursor):
 	if tabela == "valores":
-		cursor.execute("DELETE FROM valores where id = (SELECT MIN(id) FROM valores);")
+		cursor.execute("SELECT MIN(id) FROM valores;")
+		idv = cursor.fetchone()[0]
+		cursor.execute("DELETE FROM valores where id = %s;" % (idv))
 	elif tabela == "umidade":
-		cursor.execute("DELETE FROM umidade where id = (SELECT MIN(id) FROM umidade);")
+		cursor.execute("SELECT MIN(id) FROM umidade;")
+		idu = cursor.fetchone()[0]
+		cursor.execute("DELETE FROM umidade where id = %s;" % (idu))
+		#cursor.execute("DELETE FROM umidade where id = (SELECT MIN(id) FROM umidade);")
 
 def ler():
 	aux = 0
@@ -35,9 +39,7 @@ def ler():
 			print("Falha ao ler dados do DHT11 !!!")
 
 	try:
-		connect_str = "dbname='sensor' user='postgres' host='localhost'" + \
-					  "password='postgres'"
-		conn = psycopg2.connect(connect_str)
+		conn = mysql.connector.connect(user='root', password='root',host='127.0.0.1',database='embeddedpi')
 		if conn is not None:
 			print "Conectado!!"
 			cursor = conn.cursor()
@@ -65,3 +67,4 @@ while True:
 	print "Fim da execucao!"
 	time.sleep(1800)
 	print "Inicia novamente!!!"
+
