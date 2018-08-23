@@ -20,6 +20,7 @@
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="css/radio.css">
 	<script src="js/botoes.js"></script>	
+	<script src="js/tempatual.js"></script>
 
 <style>
         *,
@@ -139,21 +140,26 @@
 </head>
 <body>
 
-	<header>
-      <img src="img/rasp.svg" style="height: 45px; width: 45px;" />
+       <header>
+      <a href="index.html"><img src="img/rasp.svg" style="height: 45px; width: 45px;" /></a>
       <input type="checkbox" id="control-nav" />
       <label for="control-nav" class="control-nav"></label>
       <label for="control-nav" class="control-nav-close"></label>
 
       <nav class="float-r">
         <ul class="list-auto">
-			<li>
-            	<a>teste</a>
-          	</li>
+                                        <div id="tempatual"></div>
         </ul>
+                <ul class="list-auto">
+                        <li><a href="controletv.html"><h1>Controle TV</h1></a></li>
+                </ul>
+                <ul class="list-auto">
+                        <li><a href="controlerecep.html"><h1>Controle Receptor</h1></a></li>
+                </ul>
+
       </nav>
     </header>
-
+	
     <div style="padding-top: 30px;">
 
     	<legend>ON/OF:</legend>    	

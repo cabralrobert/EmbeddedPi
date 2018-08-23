@@ -1,6 +1,6 @@
 <?php
 
-	$retorno = shell_exec("sudo python /home/robertcabral/scripts/dht11.py");
+	$retorno = shell_exec("sudo python scripts/dht11.py");
 	$valores = explode("|",$retorno);
 
 

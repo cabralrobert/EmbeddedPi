@@ -15,14 +15,13 @@
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<script src="js/botoes.js"></script>
+	<script src="js/receptor.js"></script>
 	<script src="js/tempatual.js"></script>
 </head>
 
 <body>
 
-
-    <header>
+   <header>
       <a href="index.html"><img src="img/rasp.svg" style="height: 45px; width: 45px;" /></a>
       <input type="checkbox" id="control-nav" />
       <label for="control-nav" class="control-nav"></label>
@@ -33,7 +32,7 @@
                                         <div id="tempatual"></div>
         </ul>
                 <ul class="list-auto">
-                        <li><a href="controlerecep.html"><h1>Controle Receptor</h1></a></li>
+                        <li><a href="controletv.html"><h1>Controle TV</h1></a></li>
                 </ul>
                 <ul class="list-auto">
                         <li><a href="ar.html"><h1>Controle AR</h1></a></li>
@@ -47,7 +46,7 @@
 		<nav>
 			<ul class="desliga">
 				<li><a onclick="teste(this)" id="power"><i class="fa fa-power-off" style="font-size: 2em;"></i></a></li>				
-				<li class="retangulo"><a  onclick="teste(this)" id="input"><i class="material-icons" style="font-size: 1.5em;">input</i></a></li>
+					
 				<li class="retangulo"><a  onclick="teste(this)" id="mute"><i class="material-icons" style="font-size: 1.5em;" aria-hidden="true">volume_off</i></a></li>
 			</ul>
 			<ul class="teclado_numerico">
@@ -66,17 +65,16 @@
 				<li><a  class="key_9" onclick="teste(this)" id="9"></a></li>
 			</ul>
 			<ul class="teclado_numerico">				
-				<li><a  onclick="teste(this)" id="vol+"><i style="font-size: 3em; line-height: 70px;">+</i></a></li>
+				<li><a  onclick="teste(this)" id="tvr">TVR</a></li>
 				<li><a  class="key_0" onclick="teste(this)" id="0"></a></li>
-				<li><a  onclick="teste(this)" id="ch+"><i class="fa fa-caret-up" style="font-size: 3em; line-height: 65px;"></i></a></li>
+				<li><a  onclick="teste(this)" id="recall">RECALL</a></li>
 			</ul>			
 			<ul class="vol">				
-				<li class="teclado_numerico" style="font-size: 3em; line-height: 70px;"><a  onclick="teste(this)" id="vol-">-</a></li>
-				<li class="retangulo"><a onclick="teste(this)" id="soccer"><i class="fa fa-futbol-o" style="font-size: 1.5em;line-height: 44px;"></i></a></li>
-				<li class="teclado_numerico" ><a  onclick="teste(this)" id="ch-"><i class="fa fa-caret-down" style="font-size: 3em; line-height: 65px;"></i></a></li>
+				<li class="teclado_numerico" ><a  onclick="teste(this)" id="10ch+"><i class="fa fa-caret-up" style="font-size: 3em; line-height: 65px;"></i></a></li>
+				<li class="teclado_numerico" ><a  onclick="teste(this)" id="10ch-"><i class="fa fa-caret-down" style="font-size: 3em; line-height: 65px;"></i></a></li>
 			</ul>			
 			<ul class="quadrado">
-				<li><a  onclick="teste(this)" id="settings"><i class="material-icons" style="font-size: 1.5em;">settings</i></a></li>
+				<li><a  onclick="teste(this)" id="menu"><i class="material-icons" style="font-size: 1.5em;">settings</i></a></li>
 				<li><a  onclick="teste(this)" id="up"><i class="fa fa-arrow-up" style="font-size: 2em;"></i></a></li>
 				<li><a  onclick="teste(this)" id="info"><i class="material-icons" style="font-size: 1.5em;">info_outline</i></a></li>
 			</ul>			
@@ -86,7 +84,7 @@
 				<li><a  onclick="teste(this)" id="right"><i class="fa fa-arrow-right" style="font-size: 2em;"></i></a></li>			
 			</ul>			
 			<ul class="quadrado">				
-				<li><a  onclick="teste(this)" id="back"><i class="material-icons" style="font-size: 1.5em;">keyboard_return</i></a></li>
+				<li><a  onclick="teste(this)" id="recall"><i class="material-icons" style="font-size: 1.5em;">keyboard_return</i></a></li>
 				<li><a  onclick="teste(this)" id="down"><i class="fa fa-arrow-down" style="font-size: 2em;"></i></a></li>
 				<li><a  onclick="teste(this)" id="exit"><i class="fa fa-times-circle" style="font-size: 2em;"></i></a></li>				
 			</ul>			
