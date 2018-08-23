@@ -2,8 +2,7 @@
 
 Sistema de automação do quarto usando a raspberry pi, juntamente com PHP, js, Postgress e python.
 
-# Instalação
-
+# Instalação pacotes
 sudo apt-get install apache2
 sudo apt-get install mysql-server
 sudo apt-get install php5-mysql
@@ -17,17 +16,16 @@ git clone https://github.com/adafruit/Adafruit_Python_DHT.git
 cd Adafruit_Python_DHT/
 sudo python setup.py install
 
-# CRIAÇÂO DO BANCO DE DADOS
-# mysql -u root -p
-# echo root
-# create database embeddedpi;
-# use embeddedpi;
-# create table valores (id int AUTO_INCREMENT,hora varchar(20),valor varchar(20), primary key(id));
-# create table umidade (id int AUTO_INCREMENT,hora varchar(20),valor varchar(20), primary key(id));
+# Criação do banco de dados
+mysql -u root -p
+create database embeddedpi;
+use embeddedpi;
+create table valores (id int AUTO_INCREMENT,hora varchar(20),valor varchar(20), primary key(id));
+create table umidade (id int AUTO_INCREMENT,hora varchar(20),valor varchar(20), primary key(id));
 
 
 
-################# IR ###################
+# Configuração IR
 
 sudo apt-get update
 sudo apt-get install lirc
@@ -53,5 +51,3 @@ sudo cp ~/EmbeddedPi/ir/lircd.conf /etc/lirc/lircd.conf
 sudo reboot
 
 irsend SEND_ONCE TV_LG KEY_POWER
-
-# https://gist.github.com/prasanthj/c15a5298eb682bde34961c322c95378b
