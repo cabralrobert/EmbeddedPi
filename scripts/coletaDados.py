@@ -62,9 +62,5 @@ def ler():
 		print e
 
 
-while True:
-	ler()
-	print "Fim da execucao!"
-	time.sleep(1800)
-	print "Inicia novamente!!!"
-
+ler()
+print "Fim da execucao!"
