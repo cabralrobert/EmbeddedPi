@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 	$.ajax({
-		url: "../umidade.php",
+		url: "../php/umidade.php",
 		type: "GET",
 		contentType: "application/json; charset=utf-8",
 		success: function(data){

@@ -15,6 +15,9 @@ $result = mysqli_query($conn,$query);
 
 $data = array();
 foreach ($result as $row) {
+	$teste = explode(' ', $row["hora"]);
+	$time = explode(':', $teste[1]);
+	$row["hora"] = "$time[0]".":"."$time[1]";
 	$data[] = $row;
 }
 

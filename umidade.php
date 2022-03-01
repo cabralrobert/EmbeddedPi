@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
-$username = "root";
-$password = "root";
+$username = "robertc";
+$password = "9346";
 
 $conn = new mysqli($servername, $username, $password,"embeddedpi");
 

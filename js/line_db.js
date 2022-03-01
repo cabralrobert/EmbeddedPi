@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 	$.ajax({
-		url: "../index.php",
+		url: "../php/index.php",
 		type: "GET",
 		contentType: "application/json; charset=utf-8",
 		success: function(data){
